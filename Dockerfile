@@ -5,7 +5,7 @@ COPY misc/tor/torrc /etc/tor/torrc
 COPY misc/tor/start-tor.sh misc/tor/start-tor.sh
 COPY start.sh /start.sh
 COPY ./web /var/www/html/
-RUN echo /var/lib/tor/hidden_service/hostname >> domain.txt
+RUN cp /var/lib/tor/hidden_service/hostname /var/www/html/domain.txt
 
 RUN service tor start
 EXPOSE 80
