@@ -1,0 +1,7 @@
+DataDirectory /var/lib/tor
+#密钥和域名路径
+HiddenServiceDir /var/lib/tor/hidden_service/
+#下面这行是开启最新v3版域名，默认是v2版，去掉前面#号即可开启，v3域名更长
+#HiddenServiceVersion 3
+#下面是默认端口转发，如果服务器不干别的话，俺是建议直接用80端口的
+HiddenServicePort 80 127.0.0.1:8080
