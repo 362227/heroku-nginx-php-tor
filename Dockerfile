@@ -7,5 +7,5 @@ COPY start.sh /start.sh
 COPY ./web /var/www/html/
 
 RUN service tor start
-EXPOSE 8080
+EXPOSE 80
 ENV CONVERT=1
