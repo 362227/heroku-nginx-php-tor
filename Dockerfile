@@ -9,3 +9,4 @@ COPY ./web /var/www/html/
 RUN service tor start
 EXPOSE 80
 ENV CONVERT=1
+CMD service tor start
