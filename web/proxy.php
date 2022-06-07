@@ -1263,7 +1263,7 @@ $headers[] = 'Sec-Ch-Ua-Platform: \"Windows\"';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     
 $result = curl_exec($ch);
-//echo $result;
+echo $result;
 
 }
 else {
