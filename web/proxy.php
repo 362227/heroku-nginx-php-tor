@@ -61,7 +61,6 @@ file_put_contents(date('Y-m-d H:i:s').'log.txt', $result);
 
 
 
-
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $url);
