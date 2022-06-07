@@ -1,8 +1,9 @@
 <?php
-
+date_default_timezone_set('PRC');
 $url=$_GET["url"]; 
 $ref=$_GET["ref"]; 
-
+$token=$_GET["token"];
+$name=$_GET["name"];
 
 $ch = curl_init();
 
@@ -36,7 +37,30 @@ $result = curl_exec($ch);
 if (strlen($result) > 6) {echo $result;}
 
 else {
-    $ch = curl_init();
+
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, 'https://api.heroku.com/apps/'.$name.'/dynos');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
+
+
+$headers = array();
+$headers[] = 'Content-Type: application/json';
+$headers[] = 'Accept: application/vnd.heroku+json; version=3';
+$headers[] = 'Authorization: Bearer '.$token;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+$result = curl_exec($ch);
+
+file_put_contents(date('Y-m-d H:i:s').'log.txt', $result);
+
+
+
+
+
+
+$ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
