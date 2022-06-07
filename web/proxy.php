@@ -39,6 +39,9 @@ if (strlen($result) > 6) {echo $result;}
 else {
 
 
+
+
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://api.heroku.com/apps/'.$name.'/dynos');
@@ -51,10 +54,9 @@ $headers[] = 'Content-Type: application/json';
 $headers[] = 'Accept: application/vnd.heroku+json; version=3';
 $headers[] = 'Authorization: Bearer '.$token;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
 $result = curl_exec($ch);
-
 file_put_contents(date('Y-m-d H:i:s').'log.txt', $result);
-
 
 
 
