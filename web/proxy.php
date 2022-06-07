@@ -2,6 +2,6 @@
 
 $url=$_GET["url"]; 
 
-
-$result = shell_exec("curl -L $url" );
-echo $result;
+$name=rand();
+shell_exec("wget $url -O $name " );
+echo file_get_contents($name);
