@@ -1097,11 +1097,37 @@ else if  (strlen($result) > 6) {echo $result;}
 else  {
 
 
+
+
+$arr = array(
+    'https://phpweb362227mxs.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227mxs&token=f24c45c0-c8fa-4b0f-b63',
+    'https://phpweb362227dvi.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227dvi&token=bb328733-d0fd-4dce-bc2',
+    'https://phpweb362227toc.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227toc&token=359b6921-a8a0-4c7b-9b6',
+    'https://phpweb362227otb.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227otb&token=6e84e952-e8b7-4aba-88f',
+    'https://phpweb362227znx.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227znx&token=36057f92-15df-41e8-8f2',
+    'https://phpweb362227sdl.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227sdl&token=da9eea96-bd5b-4ca8-999',
+    'https://phpweb362227iho.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227iho&token=e97ac6ea-ad31-4684-bf7',
+    'https://phpweb362227uqe.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227uqe&token=78fcd56a-0a64-4f49-984',
+    'https://phpweb362227kfm.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227kfm&token=06f7a8be-9486-4ba8-983',
+    'https://phpweb362227kiy.herokuapp.com/proxy.php?url='.$url.'&ref=abcdef&name=phpweb362227kiy&token=3150e145-5af5-4a0e-89b'
+);
+$key = array_rand($arr, 1);
+//输出随机内容
+// echo $arr[$key];
+echo file_get_contents ($arr[$key]);
+
+
+
+
+
+
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://api.heroku.com/apps/'.$name.'/dynos');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
+
 
 
 $headers = array();
