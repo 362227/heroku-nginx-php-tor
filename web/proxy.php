@@ -1448,7 +1448,7 @@ $headers[] = 'Authorization: Bearer '.$token;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $result = curl_exec($ch);
-file_put_contents(date('Y-m-d H:i:s').'log.txt', $result);
+file_put_contents('log.txt', $result);
 
 
 
