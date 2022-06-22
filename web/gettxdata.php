@@ -84,17 +84,18 @@ $artist2 = '3622227';
 if ($artist1 !== $artist2) {$filename =  preg_replace('/.+?( \- [\s\S]*)/', ($name.'$1'), $filename);}  //如果不是多艺人（即单艺人），运行这个命令
 //cho $filename.'<br>';
 
-$qqurl1 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mp4';
+$qqurl1 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mp4';
 //echo $qqurl1;
-$qqurl2 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mov';
-$qqurl3 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.m4v';
-$qqurl4 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mpg';
-$qqurl5 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.m2p';
-$qqurl6 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.ts';
-$qqurl7 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mkv';
-$qqurl8 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mpeg';
-$qqurl9 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mp4';
-$qqurl10 = 'http://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mov';
+$qqurl2 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mov';
+$qqurl3 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.m4v';
+$qqurl4 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mpg';
+$qqurl5 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.m2p';
+$qqurl6 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.ts';
+$qqurl7 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mkv';
+$qqurl8 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mpeg';
+$qqurl9 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mp4';
+$qqurl10 = 'https://50069.gzc.svp.tencent-cloud.com/'.$qmmv.'.f0.mov';
+
 
 // echo $response1;
 
