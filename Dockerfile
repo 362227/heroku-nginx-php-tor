@@ -10,4 +10,5 @@ RUN cp /var/lib/tor/hidden_service/hostname /var/www/html/domain.txt
 
 EXPOSE 80
 ENV CONVERT=1
-CMD service tor start
+
+CMD [ "node", "./main.js" ]
